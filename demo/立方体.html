@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            margin: 200px auto;
+            position: relative;
+            transform-style: preserve-3d;
+            /* 3D旋转方便观察，四个参数分别是X,Y,z，角度 */
+            transform: rotate3d(1, 1, 0, -16deg);
+            /* 设置盒子的旋转视角，方便观察 */
+            transform: rotateX(-30deg) rotateY(30deg);
+
+        }
+
+        .box div {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            opacity: 0.8;
+        }
+
+        .zheng {
+            background-color: #C66666;
+            transform: translateZ(-150px) rotateY(180deg);
+        }
+
+        .fan {
+            background-color: #6ffff0;
+            transform: translateZ(150px);
+        }
+
+        .top {
+            background-color: #ff0080;
+            transform: translateY(-150px) rotateX(90deg);
+        }
+
+        .down {
+            background-color: #0000ff;
+            transform: translateY(150px) rotateX(90deg);
+        }
+
+        .left {
+            background-color: #00ff00;
+            transform: translateX(-150px) rotateY(-90deg);
+        }
+
+        .right {
+            background-color: #8080ff;
+            transform: translateX(150px) rotateY(90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 基本原理：六个面通过位移改变六个面的位置最终拼成一个立方体 -->
+    <div class="box">
+        <div class="zheng">这是一个正面</div>
+        <div class="fan">这是一个反面</div>
+        <div class="top">这是一个上面</div>
+        <div class="down">这是一个下面</div>
+        <div class="left">这是一个左面</div>
+        <div class="right">这是一个右面</div>
+    </div>
+
+</body>
+
+</html>

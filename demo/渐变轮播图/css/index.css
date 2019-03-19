@@ -1,0 +1,101 @@
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, ol {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	display: block;
+	color: #ccc;
+}
+img {
+	width: 100%;
+	display: block;
+}
+
+.container {
+	width: 800px;
+	height: 600px;
+	margin: 0 auto;
+	position: relative;
+	margin-top: 40px;
+}
+.container .banner ul {
+	position: relative;
+}
+.container .banner ul li {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.container .banner ul li:first-of-type {
+	z-index: 1;
+}
+.arrow {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	opacity: 0;
+	z-index: 999;
+}
+
+.arrow #arrLeft, 
+.arrow #arrRight {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 50px;
+	height: 80px;
+	background-color: rgba(0, 0, 0, .4);
+	font-size: 30px;
+	text-align: center;
+	line-height: 80px;
+	border-radius: 4px;
+	font-family: simsun;
+	font-weight: 700;
+	z-index: 999;
+}
+.arrow #arrLeft {
+	left: 8px;
+}
+.arrow #arrRight {
+	right: 8px;
+}
+
+
+.indecator ol {
+	position: absolute;
+	left: 50%;
+	bottom: 20px;
+	transform: translate(-50%);
+	z-index: 666;
+}
+.indecator ol li {
+	width: 25px;
+	height: 25px;
+	text-align: center;
+	line-height: 25px;
+	background-color: rgba(0, 0, 0, .3);
+	color: white;
+	border-radius: 50%;
+	float: left;
+	margin-right: 10px;
+	cursor: pointer;
+
+	-moz-user-select:none;/*火狐*/
+    -webkit-user-select:none;/*webkit浏览器*/
+    -ms-user-select:none;/*IE10*/
+    -khtml-user-select:none;/*早期浏览器*/
+    user-select:none;
+}
+
+.indecator ol li.current {
+	background-color: #eee;
+	color: #333;
+}
